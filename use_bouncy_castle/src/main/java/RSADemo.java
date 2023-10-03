@@ -21,7 +21,7 @@ import static java.util.Base64.*;
  * @author liyijia
  * @create 2023-10-2023/10/3
  */
-public class Demo {
+public class RSADemo {
     public static void main(String[] args) {
         try {
             RSAEncodeDemo();
