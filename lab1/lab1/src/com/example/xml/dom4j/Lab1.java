@@ -2,7 +2,6 @@ package com.example.xml.dom4j;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
@@ -42,10 +41,6 @@ public class Lab1 {
             deobfuscate(document2);
             writeXml(document2, "./deobfuscated.xml");
 
-        } catch (DocumentException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchPaddingException e) {
-            throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
