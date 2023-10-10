@@ -21,7 +21,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.net.ssl.SSLContext;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.http.HttpClient;
+//import java.net.http.HttpClient;
 import java.security.*;
 import java.security.cert.CertificateException;
 
@@ -41,8 +41,10 @@ public class ClientApplication {
 
         HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
 
-        try (CloseableHttpClient httpClient = httpClientBuilder.setConnectionManager(getHttpClientConnectionManager()).build()) {
-
+        try {
+            CloseableHttpClient httpClient = httpClientBuilder
+                    .setConnectionManager(getHttpClientConnectionManager())
+                    .build();
 //        SSLConnectionSocketFactory socketFactory = new SSLConnectionSocketFactory(new SSLContextBuilder()
 //                .loadTrustMaterial(null, new TrustSelfSignedStrategy())
 //                .loadKeyMaterial(keyStore, "password".toCharArray()).build(),
@@ -58,12 +60,16 @@ public class ClientApplication {
         requestFactory.setConnectTimeout(Integer.valueOf(10000));
 
         restTemplate.setRequestFactory(requestFactory);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return restTemplate;
     }
 
     private static HttpClientConnectionManager getHttpClientConnectionManager() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException, UnrecoverableKeyException, CertificateException, IOException {
         return PoolingHttpClientConnectionManagerBuilder.create()
+                .setMaxConnTotal(Integer.valueOf(5))
+                .setMaxConnPerRoute(Integer.valueOf(5))
                 .setSSLSocketFactory(getSslConnectionSocketFactory())
                 .build();
     }

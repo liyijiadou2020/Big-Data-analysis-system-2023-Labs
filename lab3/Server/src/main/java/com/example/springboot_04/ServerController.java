@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ServerController {
     @RequestMapping( value = "/data", method = RequestMethod.GET)
     public String getData(){
-        String string = "<h1>Returning data from sever.</h1>";
+        String string = "<h1>Returning data from sever! (*^_^*)🎉</h1>";
         System.out.println(string);
         return string;
     } // https://localhost:8765/server/data

@@ -31,16 +31,15 @@ public class GatewayController {
 
     @RequestMapping(value = "/server-data", method = RequestMethod.GET)
     public String getServerData() {
-        System.out.println("Returning data from serer through gateway");
+        System.out.println("Returning data from server through gateway");
         try {
             String msEndpoint = env.getProperty("endpoint.server");
             System.out.println("Endpoint name : [" + msEndpoint + "]");
-            return restTemplate.getForObject(new
-                    URI(Objects.requireNonNull(msEndpoint)), String.class);
+            return restTemplate.getForObject(new URI(Objects.requireNonNull(msEndpoint)), String.class);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return "Exception occurred";
+        return "<h1>Exception occurred</h1>";
     }// https://localhost:8080/gateway/server-data
 
 } // https://localhost:8080
