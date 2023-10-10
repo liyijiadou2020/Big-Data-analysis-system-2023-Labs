@@ -5,39 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997ac6f7-4347-4845-9d7d-de37a772a6fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/lab1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Baeldung.cer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../certificate-signed-request.csr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/deobfuscated.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/employees.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employees.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/labs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/obfuscated.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/res/employees.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/employees.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/src/com/example/xml/dom4j/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/src/labs/Lab2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../private-key.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/Baeldung.cer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/Baeldung.p12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/java/CryptoWithBouncyCastle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab3/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/Client/src/main/java/com/client/RestTemplateConfig.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +42,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/source/big_data_labs/lab1/libs",
+    "last_opened_file_path": "C:/source/big_data_labs/lab2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -133,6 +105,7 @@
       <workItem from="1695489304710" duration="97000" />
       <workItem from="1695489433321" duration="854000" />
       <workItem from="1696969330078" duration="910000" />
+      <workItem from="1696970359611" duration="180000" />
     </task>
     <servers />
   </component>
