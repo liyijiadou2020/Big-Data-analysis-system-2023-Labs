@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="997ac6f7-4347-4845-9d7d-de37a772a6fe" name="Changes" comment="" />
+    <list default="true" id="997ac6f7-4347-4845-9d7d-de37a772a6fe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/lab1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Baeldung.cer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../certificate-signed-request.csr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/deobfuscated.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/employees.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employees.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/labs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/obfuscated.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/res/employees.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/employees.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/com/example/xml/dom4j/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lab1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/labs/Lab2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../private-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/Baeldung.cer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/Baeldung.p12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/java/CryptoWithBouncyCastle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../use_bouncy_castle/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,27 +60,42 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/source/Big-Data-analysis-system-2023-Labs/lab1",
+    "last_opened_file_path": "C:/source/big_data_labs/lab1/libs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.language",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\source\big_data_labs\lab1\libs" />
+      <recent name="C:\source\big_data_labs\lab1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Lab1">
+    <configuration name="Lab1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab1" />
+      <module name="lab1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="lab2" />
       <method v="2">
@@ -67,6 +116,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Lab1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,6 +132,7 @@
       <updated>1695489303789</updated>
       <workItem from="1695489304710" duration="97000" />
       <workItem from="1695489433321" duration="854000" />
+      <workItem from="1696969330078" duration="910000" />
     </task>
     <servers />
   </component>

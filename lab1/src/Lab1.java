@@ -1,5 +1,3 @@
-package com.example.xml.dom4j;
-
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
@@ -17,7 +15,6 @@ import java.util.Base64;
 import java.util.List;
 
 public class Lab1 {
-
     private static final String KEY_ALGORITHM = "AES";
     private static final String DEFAULT_CIPHER_ALGORITHM = "AES/ECB/PKCS5Padding";
     static final String ENCODING = "UTF-8";
@@ -44,9 +41,7 @@ public class Lab1 {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-
-    } // main
+    }
 
     public static void obfuscate(Document document) {
         Element root = document.getRootElement();
@@ -165,8 +160,5 @@ public class Lab1 {
         SecretKey secretKey = kg.generateKey();
         return new SecretKeySpec(secretKey.getEncoded(), KEY_ALGORITHM);
     }
-
-
-
 
 }
