@@ -5,16 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997ac6f7-4347-4845-9d7d-de37a772a6fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab3/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab3/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/Client/src/main/java/com/client/RestTemplateConfig.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Obfuscatror.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/lab1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lab1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/src/main/java/CryptoWithBouncyCastle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/src/main/java/CryptoWithBouncyCastle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/Client/src/main/java/com/client/GatewayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/Client/src/main/java/com/client/GatewayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/Server/src/main/java/com/example/springboot_04/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/Server/src/main/java/com/example/springboot_04/ServerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -47,8 +62,9 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.11641443",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "configurable.group.language",
     "vue.rearranger.settings.migration": "true"
@@ -60,10 +76,12 @@
       <recent name="C:\source\big_data_labs\lab1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Lab1">
-    <configuration name="Lab1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lab1" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Java\jdk-17" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="lab1" />
+      <option name="PROGRAM_PARAMETERS" value="deobf" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -88,11 +106,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Lab1" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Spring Boot.DemoApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -106,6 +123,9 @@
       <workItem from="1695489433321" duration="854000" />
       <workItem from="1696969330078" duration="910000" />
       <workItem from="1696970359611" duration="180000" />
+      <workItem from="1697014852340" duration="3455000" />
+      <workItem from="1697019099644" duration="3983000" />
+      <workItem from="1697024756626" duration="3717000" />
     </task>
     <servers />
   </component>

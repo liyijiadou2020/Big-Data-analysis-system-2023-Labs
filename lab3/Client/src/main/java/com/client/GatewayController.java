@@ -42,4 +42,7 @@ public class GatewayController {
         return "<h1>Exception occurred</h1>";
     }// https://localhost:8080/gateway/server-data
 
-} // https://localhost:8080
+}
+
+//# проверять в gateway.jks есть ли свой privateKey и сертивикат от server
+//  keytool -list -keystore gateway.jks -storepass password

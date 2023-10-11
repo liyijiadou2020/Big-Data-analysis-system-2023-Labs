@@ -27,7 +27,6 @@ public class CryptoWithBouncyCastle {
         try {
             Security.addProvider(new BouncyCastleProvider());
             CertificateFactory certFactory= CertificateFactory.getInstance("X.509", "BC");
-
             X509Certificate certificate = (X509Certificate) certFactory.generateCertificate(new FileInputStream("Baeldung.cer"));
 
             char[] keystorePassword = "password".toCharArray();
@@ -37,22 +36,23 @@ public class CryptoWithBouncyCastle {
             keystore.load(new FileInputStream("Baeldung.p12"), keystorePassword);
             PrivateKey key = (PrivateKey) keystore.getKey("baeldung", keyPassword);
 
-            String secretMessage = "My password is 123456Seven";
-            System.out.println("Original Message : " + secretMessage);
+            String secretMessage = "My name is Li Yijia. I study in SPBSTU. ";
+            System.out.println("\nOriginal Message : " + secretMessage);
 
             byte[] stringToEncrypt = secretMessage.getBytes();
-            byte[] encryptedData = encryptData(stringToEncrypt, certificate);
-            System.out.println("Encrypted Message : ");
-            System.out.println(new String(Hex.encode(encryptedData)));
+            byte[] encryptedData = encryptData(stringToEncrypt, certificate); // 1. шифрование
+            System.out.println("\nEncrypted Message : ");
+            System.out.println(new String(encryptedData));
+//            System.out.println(new String(Hex.encode(encryptedData)));
 
-            byte[] rawData = decryptData(encryptedData, key);
+            byte[] rawData = decryptData(encryptedData, key); // 2. дешифрование
             String decryptedMessage = new String(rawData);
-            System.out.println("Decrypted Message : ");
+            System.out.println("\nDecrypted Message : ");
             System.out.println(decryptedMessage);
 
-            byte[] signedData = signData(rawData, certificate, key); // 签名：使用密钥和公钥
-            Boolean check = verifySignedData(signedData); // 验签
-            System.out.println(check);
+            byte[] signedData = signData(rawData, certificate, key); // 3. подписать
+            Boolean check = verifySignedData(signedData); // 4. проверять подпись
+            System.out.println("\nResult verification sign: " + check);
 
         } catch (Exception e) {
             throw new RuntimeException(e);

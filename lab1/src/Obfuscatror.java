@@ -2,51 +2,58 @@ import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
-import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
-
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.List;
 
-public class Lab1 {
+/**
+ * @author liyijia
+ * @create 2023-10-2023/10/11
+ */
+public class Obfuscatror {
     private static final String KEY_ALGORITHM = "AES";
     private static final String DEFAULT_CIPHER_ALGORITHM = "AES/ECB/PKCS5Padding";
     static final String ENCODING = "UTF-8";
-    static final String PASSWORD = "46EBA22EF5204DD5B110A1F730513965";
+    static String PASSWORD = "";
     static Cipher cipher = null;
     static SecretKeySpec secretKeySpec = null;
 
-    public static void main(String[] args) {
-        SAXReader saxReader = new SAXReader();
-        try {
-            // 1. obfuscate xml file：Encrypting attribute values and node content using the AES algorithm
-            Document document = saxReader.read(new File("employees.xml"));
-            cipher = Cipher.getInstance(DEFAULT_CIPHER_ALGORITHM);
-            secretKeySpec = getSecretKey(PASSWORD);
-            obfuscate(document);
-            writeXml(document, "./obfuscated.xml");
-
-            // 2. deobfuscate xml file:
-            Document document2 = saxReader.read(new File("obfuscated.xml"));
-            secretKeySpec = getSecretKey(PASSWORD);
-            deobfuscate(document2);
-            writeXml(document2, "./deobfuscated.xml");
-
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    public Obfuscatror(String passowrd) throws NoSuchPaddingException, NoSuchAlgorithmException {
+        this.PASSWORD = passowrd;
+        cipher = Cipher.getInstance(DEFAULT_CIPHER_ALGORITHM);
+        secretKeySpec = getSecretKey(PASSWORD);
     }
 
     public static void obfuscate(Document document) {
-        Element root = document.getRootElement();
+        Element root = document.getRootElement(); // корневой узел документа
         obfuscate_node(root);
+    }
 
+    private static void obfuscate_node(Element node) {
+        if (!node.getTextTrim().isEmpty()) {
+            node.setText(encryptString(node.getTextTrim())); //
+        }
+        final List<Attribute> listAttr = node.attributes();
+        for (final Attribute attr : listAttr) {
+//            final String name = attr.getName();
+            final String value = attr.getValue();
+            if (!value.isEmpty()) {
+                attr.setValue(encryptString(value));
+            }
+        }
+        final List<Element> listElement = node.elements();
+        for (final Element e : listElement) {
+            obfuscate_node(e); // рекурсивная обфускация данных
+        }
     }
 
     public static void deobfuscate(Document document) throws Exception {
@@ -54,7 +61,7 @@ public class Lab1 {
         deobfuscate_node(root);
     }
 
-    private static void writeXml(Document document, String pathStr) {
+    public static void writeXml(Document document, String pathStr) {
         FileOutputStream out = null;
         try {
             out = new FileOutputStream(pathStr);
@@ -72,23 +79,7 @@ public class Lab1 {
         }
     }
 
-    private static void obfuscate_node(Element node) {
-        if (!node.getTextTrim().isEmpty()) {
-            node.setText(encryptString(node.getTextTrim()));
-        }
-        final List<Attribute> listAttr = node.attributes();
-        for (final Attribute attr : listAttr) {
-            final String name = attr.getName();
-            final String value = attr.getValue();
-            if (!value.isEmpty()) {
-                attr.setValue(encryptString(value)); // bug
-            }
-        }
-        final List<Element> listElement = node.elements();
-        for (final Element e : listElement) {
-            obfuscate_node(e);
-        }
-    }
+
 
 
     private static void deobfuscate_node(Element node) throws Exception {
@@ -109,8 +100,6 @@ public class Lab1 {
             deobfuscate_node(e);
         }
     }
-
-
 
     /**
      * AES encrypt

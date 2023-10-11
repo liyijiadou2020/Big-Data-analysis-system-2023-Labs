@@ -19,3 +19,6 @@ public class ServerController {
     } // https://localhost:8765/server/data
 
 }
+
+// # проверять в server.jks есть ли свой privateKey и сертивикат от gateway
+// keytool -list -keystore server.jks -storepass password
