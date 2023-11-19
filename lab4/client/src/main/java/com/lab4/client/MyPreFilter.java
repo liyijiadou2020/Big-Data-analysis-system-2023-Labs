@@ -51,7 +51,7 @@ public class MyPreFilter extends ZuulFilter {
         System.out.println("Request URL: " + ctx.getRequest().getRequestURL().toString());
         System.out.println("Add header to request\n");
 
-        ctx.addZuulRequestHeader("Test", "My Zuul filter is adding new HTTP header to HTTP request...");
+        ctx.addZuulRequestHeader("My-Test-Header", "My Zuul filter is adding new HTTP header to HTTP request...");
         return null;
     }
 

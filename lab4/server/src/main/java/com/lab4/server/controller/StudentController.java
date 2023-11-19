@@ -19,13 +19,13 @@ public class StudentController {
             @PathVariable long id, HttpServletRequest request, HttpServletResponse response)
     {
         // 获取请求头 "Test" 的值
-        String testHeader = request.getHeader("Test");
+        String testHeader = request.getHeader("My-Test-Header");
 
         // 如果 "Test" 请求头存在，将它的值添加到响应头
         if (testHeader != null){
-            System.out.println("[findById] Found test header - " + testHeader);
-            response.addHeader("Test", testHeader);
-            System.out.println("Server add HTTP header “Test” to" +
+            System.out.println("[findById] Found header - " + testHeader);
+            response.addHeader("My-Test-Header", testHeader);
+            System.out.println("Server add HTTP header “My-Test-Header” to" +
                     " response.");
         }
         System.out.println("Server returns object.\n");
