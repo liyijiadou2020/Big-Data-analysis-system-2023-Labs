@@ -1,5 +1,15 @@
+server:
+  port: 8080
+
+#spring:
+#  application:
+#    name: zuul-server
+
 zuul:
   routes:
-    foos:
-      path: /data/**
-      url: http://localhost:8081/rest-api/data
+    service-name:     # 服务名，这是自定义的
+      path: /data/**  # 静态路由
+      url: http://localhost:8081/rest-api/data  # 映射路径对应的实际url地址
+
+
+# 访问：http://localhost:8080

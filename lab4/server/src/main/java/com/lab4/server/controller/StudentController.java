@@ -1,5 +1,5 @@
-package com.lab4.controller;
-import com.lab4.dto.Student;
+package com.lab4.server.controller;
+import com.lab4.server.dto.Student;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -23,9 +23,12 @@ public class StudentController {
 
         // 如果 "Test" 请求头存在，将它的值添加到响应头
         if (testHeader != null){
+            System.out.println("[findById] Found test header - " + testHeader);
             response.addHeader("Test", testHeader);
+            System.out.println("Server add HTTP header “Test” to" +
+                    " response.");
         }
-
+        System.out.println("Server returns object.\n");
         return new Student(id, RandomStringUtils.randomAlphanumeric(10));
     }
 

@@ -1,4 +1,4 @@
-package com.lab4.dto;
+package com.lab4.server.dto;
 
 /**
  * @author liyijia
