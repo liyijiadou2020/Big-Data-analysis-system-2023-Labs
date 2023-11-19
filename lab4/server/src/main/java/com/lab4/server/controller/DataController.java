@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  */
 
 @RestController
-public class StudentController {
+public class DataController {
 
     @RequestMapping(value = "/data/{id}", method = RequestMethod.GET)
     @ResponseBody
