@@ -177,6 +177,11 @@ keytool -list -keystore gateway.jks -storepass password
 keytool -importkeystore -srckeystore server.jks -destkeystore server.p12 -srcstoretype JKS -deststoretype PKCS12 -srcstorepass password -deststorepass password -srcalias server -destalias server -srckeypass password -destkeypass password -noprompt
 
 
+
+keytool -importkeystore -srckeystore gateway.jks -destkeystore gateway.p12 -srcstoretype JKS -deststoretype PKCS12 -srcstorepass password -deststorepass password -srcalias gateway -destalias gateway -srckeypass password -destkeypass password -noprompt
+
+
+
 ```
 
 ```YAML
@@ -323,7 +328,7 @@ return "Exception occurred";
 }
 ```
 
-到这一步其实已经好了，但是如果我们用浏览器去访问https://localhost:8080会报错：
+到这一步其实已经好了，但是如果我们用浏览器去访问 https://localhost:8080 会报错：
 ```Java
 此网站无法提供安全连接localhost 不接受您的登录证书，或者您可能没有提供登录证书。
 请尝试联系系统管理员。
@@ -359,8 +364,12 @@ private static HttpClientConnectionManager getHttpClientConnectionManager() thro
     }
 ```
 
+访问这里： https://localhost:8080/server/data 。**千万记住别漏了s**，这很关键！
 最后成功了！
 ![image.png](https://raw.githubusercontent.com/liyijiadou2020/picrepo/master/202311200001547.png)
+
+---
+
 ## 4 LAB 4 Создание маршрутизатора для клиент-серверного приложения, работающего через Gateway посредством библиотеки Netflix Zuul 使用 Netflix Zuul 库为通过 Gateway 运行的客户端-服务器应用程序创建路由器
 
 报错：
@@ -650,9 +659,15 @@ Process finished with exit code 1
 
 思考了一下原因，可能是maven依赖错综复杂。直接copy人家已经能跑的 `pom.xml` 的确是解决问题最直接的办法。
 
-跑起来了：
+
+最后我们来验证整个实验是否成功。
+访问： http://localhost:8080 ，回车
+发现页面可以加载出来：
 ![image.png](https://raw.githubusercontent.com/liyijiadou2020/picrepo/master/202311200002442.png)
-确实在响应头中看到了我们在网关程序中添加的`My-Test-Header`
+先打开“浏览器开发者工具”，然后来到“Netword”标签下。此时还没有发送的请求和响应。
+点一下页面上的“Get Data From Server”，发现ID和Name发生了变化，说明已经访问到了服务器并接收到返回的响应。
+最后确实，在响应头中看到了我们在网关程序中添加的`My-Test-Header`。这就说明网关程序帮我们添加的HTTP头部字段`My-Test-Header` 被正确地转发到了服务器的端口上。实验成功！
+
 
 ### 4.1 实验中遇到的坑
 
