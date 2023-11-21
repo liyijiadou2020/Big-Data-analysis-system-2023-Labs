@@ -145,34 +145,35 @@ XML解析工具：dom4j
 ```shell
 
 # Создание самоподписанного сертификата клиента 
-# 创建客户的自签名证书
-keytool -genkeypair -alias gateway -keyalg RSA -keysize 2048 -storetype JKS -keystore gateway.jks -validity 3650 -dname "CN=San Zhang, OU=MyDepartment, O=MyCompany, L=Beijing, ST=Beijing, C=CN" -ext SAN=dns:localhost,ip:127.0.0.1
+# 在client\src\main\resources\static下创建客户的自签名证书(jks是私钥格式)
+keytool -genkeypair -alias gateway -keyalg RSA -keysize 2048 -storetype JKS -keystore gateway.jks -validity 3650 -dname "CN=San Zhang, OU=MyDepartment, O=MyCompany, L=Beijing, ST=Beijing, C=CN" -ext SAN=dns:localhost,ip:127.0.0.1 -keypass password -storepass password
 
 # Создание файла публичного сертификата из сертификата клиента 
-# 创建客户的公钥
+# 创建客户的公钥(crt是公钥格式)
 keytool -export -alias gateway -file gateway.crt -keystore gateway.jks
 
 
 # Создание самоподписанного сертификата сервера 
-# 创建服务器的自签名证书
-keytool -genkeypair -alias gateway -keyalg RSA -keysize 2048 -storetype JKS -keystore server.jks -validity 3650 -dname "CN=Si Li, OU=MyDepartment, O=MyCompany, L=Beijing, ST=Beijing, C=CN" -ext SAN=dns:localhost,ip:127.0.0.1
+# 在server\src\main\resources\static下创建服务器的自签名证书
+keytool -genkeypair -alias gateway -keyalg RSA -keysize 2048 -storetype JKS -keystore server.jks -validity 3650 -dname "CN=Si Li, OU=SPBSTU, O=SPBSTU, L=SPB, ST=SPB, C=RU" -ext SAN=dns:localhost,ip:127.0.0.1 -keypass password -storepass password
 
 # Создание файла публичного сертификата из сертификата сервера 
 # 导出公开证书 server.crt
 keytool -export -alias server -file server.crt -keystore server.jks
 
 # Импорт клиентского сертификат в jks-файл сервера
-# 向服务器的jks中加入gateway的整数
+# 把客户端的gateway.crt复制到服务器的src\main\resources\static目录下,然后向服务器的server.jks中加入gateway的证书
 keytool -import -alias gateway -file gateway.crt -keystore server.jks
 # 检验server.jks是否具有自己的privateKey和gateway的cert
 keytool -list -keystore server.jks -storepass password
 
 # Импорт сертификата сервера в jks-файл клиента делается аналогично:
+# 把服务端的jks复制到客户端的resource目录下。
 keytool -import -alias server -file server.crt -keystore gateway.jks
 # 检验gateway.jks是否具有自己的privateKey和server的cert
 keytool -list -keystore gateway.jks -storepass password
 
-# 转化：server.jks -> server.p12
+# 在服务器的证书目录下完成转化：server.jks -> server.p12
 keytool -importkeystore -srckeystore server.jks -destkeystore server.p12 -srcstoretype JKS -deststoretype PKCS12 -srcstorepass password -deststorepass password -srcalias server -destalias server -srckeypass password -destkeypass password -noprompt
 
 
